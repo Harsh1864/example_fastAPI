@@ -8,8 +8,8 @@ from psycopg2.extras import RealDictCursor
 
 # SQLALCHEMY_DATABASE_URL = 'postgresql://postgres:Harsh6567@localhost/fastAPI'
 DATABASE_URL = os.getenv('DATABASE_URL')
-if DATABASE_URL.startswith("postgres://"):
-    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+# if DATABASE_URL.startswith("postgres://"):
+#     DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
 engine = create_engine(DATABASE_URL)
 # engine = create_engine(SQLALCHEMY_DATABASE_URL)
