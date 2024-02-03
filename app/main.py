@@ -29,7 +29,9 @@ app.add_middleware(
 def root():
     return {"message": "Hello World"}
 
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine, checkfirst=True)
+
 
 
 
